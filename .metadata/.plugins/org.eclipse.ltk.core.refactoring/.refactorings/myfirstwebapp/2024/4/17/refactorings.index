@@ -1,0 +1,11 @@
+1713784721079	Copy file
+1713856532481	Copy file
+1713933586024	Rename resource 'addTodo.jsp'
+1714029916775	Copy file
+1714030521441	Delete element
+1714127379099	Extract local variable 'username'
+1714127418481	Extract local variable 'password'
+1714127671783	Extract method 'createNewUser'
+1714127686811	Inline local variable 'username'
+1714127694113	Inline local variable 'password'
+1714159086243	Copy compilation unit

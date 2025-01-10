@@ -1,0 +1,31 @@
+package com.association.jpa;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.association.jpa.models.Author;
+import com.association.jpa.repositories.AuthorRepository;
+
+@SpringBootApplication
+public class JpaApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(JpaApplication.class, args);
+	}
+	
+	@Bean
+	public CommandLineRunner commandLineRunner(AuthorRepository reposiotry) {
+		return args->{
+			var author = Author.builder()
+					.firstName("Prabhat")
+					.lastName("Sharma")
+					.age(25)
+					.email("qwerty@gmail.com")
+					.build();
+			reposiotry.save(author);
+		};
+	}
+
+}
